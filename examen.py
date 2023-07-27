@@ -5,6 +5,7 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
+Nombre: Franco Miranda
 Enunciado:
 
 
@@ -98,7 +99,17 @@ class App(customtkinter.CTk):
             i = i +1
 
     def btn_informar_on_click(self):
-       pass
+        i = 0
+        peso_maximo = 0
+        posicion = 0
+        while i < len(self.lista_pesos):
+            if peso_maximo < self.lista_pesos[i]:
+                peso_maximo = self.lista_pesos[i]
+                posicion = i
+            i = i +1
+        print(peso_maximo * 0.035274)
+        print(posicion)
+    
 
        
 if __name__ == "__main__":
